@@ -32,16 +32,16 @@ export default function NavBar() {
                         {isMenuOpen.value
                             ? (
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                 />
                             )
                             : (
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M3 5h14a1 1 0 010 2H3a1 1 0 010-2zm0 6h14a1 1 0 010 2H3a1 1 0 010-2z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                 />
                             )}
                     </svg>
@@ -63,18 +63,10 @@ export default function NavBar() {
                         </li>
                         <li>
                             <a
-                                href="/about"
+                                href="/videos"
                                 class="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-gray-700 md:p-0 hover:text-blue-700"
                             >
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/services"
-                                class="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-gray-700 md:p-0 hover:text-blue-700"
-                            >
-                                Services
+                                Videos
                             </a>
                         </li>
                         <li>
@@ -83,6 +75,20 @@ export default function NavBar() {
                                 class="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-gray-700 md:p-0 hover:text-blue-700"
                             >
                                 Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.youtube.com/channel/UChAb4Ulw3KeDllUj4lV_w6w"
+                                target="_blank"
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:text-gray-700 md:p-0 hover:text-blue-700"
+                                aria-label="YouTube Channel"
+                            >
+                                <img
+                                    src="https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png"
+                                    alt="YouTube"
+                                    class="h-6 w-6"
+                                />
                             </a>
                         </li>
                     </ul>
