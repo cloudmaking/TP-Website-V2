@@ -15,87 +15,121 @@ export default function Home() {
           name="keywords"
           content="Tufail Publishers, educational books, learning resources, teaching styles in Urdu, quality education, CEO message, training videos"
         />
+        {/* Font and Icons */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
-      <div class="bg-gray-100 text-gray-800">
-        {/* CEO Message Section */}
-        <section class="px-4 py-16 bg-[#e6c558] text-center">
-          <div class="max-w-screen-md mx-auto flex flex-col items-center">
-            <h1 class="text-4xl font-bold mb-6">A Message From Our CEO</h1>
-            <iframe
-              class="w-full max-w-md h-64 mx-auto mb-6 border rounded-lg"
-              src="https://www.youtube.com/embed/sJFJaQHOuIk"
-              title="CEO Message"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+      <div class="bg-gray-50 text-gray-800 font-sans">
+        {/* Hero Section */}
+        <section
+          class="relative bg-cover bg-center bg-no-repeat text-center text-black py-8"
+          style={{ backgroundImage: "url('/hero_bg2.webp')" }}
+        >
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <div class="relative z-10 max-w-2xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+              Welcome to Tufail Publishers
+            </h1>
+            <p class="text-lg md:text-xl mb-8">
+              Quality Educational Resources for Inspired Learning
+            </p>
+            <div class="w-full max-w-3xl mb-8">
+              <iframe
+                class="w-full h-64 md:h-96 rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/sJFJaQHOuIk"
+                title="CEO Message"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              >
+              </iframe>
+            </div>
+            <a
+              href="#about"
+              class="inline-block bg-black hover:bg-lime-950 text-white font-medium py-3 px-6 rounded-full transition duration-300"
             >
-            </iframe>
-            <p class="text-md px-4 text-justify">
-              At some point in the past, a small snippet of sunlight reflected
-              on a glass window frame and inspired an idea to publish
-              intriguing, creative, and lovely books. This idea burst into light
-              and initiated what is now known as Tufail Publishers. We believe
-              in quality first, where books are better understood when
-              accompanied by pictures and stories. Publishing for us is about
-              bringing out the best in students through our acclaimed
-              educational books and innovative workbooks.
+              Learn More
+            </a>
+          </div>
+        </section>
+
+        {/* CEO Message Section */}
+        <section id="ceo-message" class="px-6 py-8 bg-white">
+          <div class="max-w-screen-lg mx-auto flex flex-col items-center">
+            <p class="text-lg text-gray-700 max-w-3xl leading-relaxed text-center">
+              <span class="font-light italic text-gray-600">
+                "At some point in the past, a small snippet of sunlight
+                reflected on a glass window frame and inspired an idea to
+                publish intriguing, creative, and engaging books."
+              </span>
+              <br />
+              <br />
+              This vision blossomed into Tufail Publishers, a company dedicated
+              to producing high-quality educational resources. We prioritize
+              clarity, creativity, and meaningful content, believing that
+              students learn best when they are inspired and engaged. Through
+              our books, we strive to make a lasting impact on education, one
+              story at a time.
             </p>
           </div>
         </section>
 
         {/* Teaching Styles Video Section */}
-        <section class="px-4 py-16 bg-white text-center">
-          <div class="max-w-screen-md mx-auto flex flex-col items-center">
-            <h2 class="text-3xl font-semibold mb-6">
-              4 Teaching Styles in Urdu
-            </h2>
-            <iframe
-              class="w-full max-w-md h-64 mx-auto mb-6 border rounded-lg"
-              src="https://www.youtube.com/embed/CmLss-EN-zE"
-              title="4 Teaching Styles in Urdu"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            >
-            </iframe>
-            <p class="text-md px-4 text-justify">
-              Discover four main teaching styles used in educational
-              environments, explained in Urdu. This video covers diverse methods
-              that cater to various learning preferences, providing insights
-              into effective teaching strategies.
+        <section id="videos" class="px-6 py-16 bg-gray-50">
+          <div class="max-w-screen-lg mx-auto flex flex-col items-center">
+            {
+              /* <h2 class="text-3xl font-semibold mb-8 text-gray-900">
+              Teaching Styles in Urdu
+            </h2> */
+            }
+            <div class="w-full max-w-3xl mb-8">
+              <iframe
+                class="w-full h-64 md:h-96 rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/CmLss-EN-zE"
+                title="Teaching Styles in Urdu"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              >
+              </iframe>
+            </div>
+            <p class="text-lg text-gray-700 max-w-3xl leading-relaxed text-center">
+              Discover various teaching methods tailored to diverse learning
+              preferences. This video provides insights into educational
+              strategies that enhance understanding and engagement, all
+              explained in Urdu for greater accessibility.
             </p>
-          </div>
-          {/* YouTube Call-to-Action */}
-          <p class="mt-6 text-md text-gray-700 px-4 text-center">
-            For more great training videos like this,{" "}
+            {/* YouTube Call-to-Action */}
             <a
               href="https://www.youtube.com/channel/UChAb4Ulw3KeDllUj4lV_w6w"
               target="_blank"
-              class="text-blue-500 hover:underline"
+              class="mt-8 inline-block bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-full transition duration-300"
             >
-              subscribe to our YouTube channel
-            </a>{" "}
-            and stay updated on new resources.
-          </p>
+              Subscribe to our YouTube Channel
+            </a>
+          </div>
         </section>
 
         {/* About Tufail Publishers Section */}
         <section
-          class="relative bg-cover bg-center bg-no-repeat text-center text-white py-16"
+          id="about"
+          class="relative bg-cover bg-center bg-no-repeat text-white py-32"
           style={{ backgroundImage: "url('/book_banner.jpg')" }}
         >
-          <div class="bg-black bg-opacity-50 py-8 px-4">
-            <div class="max-w-screen-md mx-auto">
-              <h2 class="text-3xl font-semibold mb-4">
-                About Tufail Publishers
-              </h2>
-              <p class="text-md text-justify">
-                Tufail Publishers is committed to quality first. We believe in
-                the power of storytelling and illustrations to enhance
-                understanding and engagement. Our mission is to foster a love
-                for learning through beautifully crafted books and innovative
-                educational resources that bring out the best in students.
-              </p>
-            </div>
+          <div class="absolute inset-0 bg-blue-900 opacity-75"></div>
+          <div class="relative z-10 max-w-screen-md mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold mb-6">
+              About Tufail Publishers
+            </h2>
+            <p class="text-lg leading-relaxed">
+              Tufail Publishers is driven by a commitment to quality and a
+              passion for impactful storytelling. Our mission is to inspire a
+              love for learning by creating books that blend informative content
+              with engaging visuals. Each publication is crafted to meet the
+              needs of students and educators, providing tools for meaningful
+              and effective learning experiences.
+            </p>
           </div>
         </section>
       </div>
