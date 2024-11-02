@@ -1,6 +1,9 @@
 import { Head } from "$fresh/runtime.ts";
+import { useRef } from "preact/hooks";
 
 export default function Videos() {
+    const carouselRef = useRef<HTMLDivElement>(null);
+
     return (
         <>
             <Head>
@@ -21,7 +24,7 @@ export default function Videos() {
                     <h1 class="text-4xl font-bold mb-4">
                         Free Math Video Lessons
                     </h1>
-                    <p class="text-lg text-gray-700 max-w-screen-md mx-auto text-justify">
+                    <p class="text-md text-gray-700 max-w-screen-md mx-auto text-justify">
                         Welcome to Tufail Publishers' free Math video lessons.
                         These playlists are designed to make learning accessible
                         and enjoyable for everyone. Our videos cover the entire
@@ -42,89 +45,78 @@ export default function Videos() {
                     </p>
                 </section>
 
-                {/* Playlists Section */}
-                <section class="grid gap-8 max-w-96 mx-auto">
-                    {/* Class 1 Playlist */}
-                    <div class="bg-white shadow-md rounded-lg p-6 text-center">
-                        <h2 class="text-2xl font-semibold mb-4">
-                            Math: Class 1 Playlist
-                        </h2>
-                        <iframe
-                            class="w-full h-64 mb-4 rounded-lg"
-                            src="https://www.youtube.com/embed/videoseries?list=PL5yflaiEp7FisZjwsjAjQXUh4o8YyNSbG"
-                            title="Math Class 1 Playlist"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        >
-                        </iframe>
-                        <p class="text-gray-700 text-justify">
-                            Learn Math concepts for Class 1 with easy-to-follow
-                            video lessons in Urdu. This playlist covers each
-                            chapter of the Class 1 Math textbook, making
-                            knowledge accessible and free for everyone.
-                        </p>
-                    </div>
-
-                    {/* Class 2 Playlist */}
-                    <div class="bg-white shadow-md rounded-lg p-6 text-center">
-                        <h2 class="text-2xl font-semibold mb-4">
-                            Math: Class 2 Playlist
-                        </h2>
-                        <iframe
-                            class="w-full h-64 mb-4 rounded-lg"
-                            src="https://www.youtube.com/embed/videoseries?list=PL5yflaiEp7FhVI--uTPsyGLwLiRpWw5yt"
-                            title="Math Class 2 Playlist"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        >
-                        </iframe>
-                        <p class="text-gray-700 text-justify">
-                            Dive into Math for Class 2 with comprehensive video
-                            lessons. This playlist provides step-by-step
-                            guidance in Urdu, helping students to master the
-                            topics at their own pace.
-                        </p>
-                    </div>
-
-                    {/* Class 3 Playlist */}
-                    <div class="bg-white shadow-md rounded-lg p-6 text-center">
-                        <h2 class="text-2xl font-semibold mb-4">
-                            Math: Class 3 Playlist
-                        </h2>
-                        <iframe
-                            class="w-full h-64 mb-4 rounded-lg"
-                            src="https://www.youtube.com/embed/videoseries?list=PL5yflaiEp7FhYwwvxqvctAI7gONGo_WBt"
-                            title="Math Class 3 Playlist"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        >
-                        </iframe>
-                        <p class="text-gray-700 text-justify">
-                            Master Class 3 Math with detailed explanations of
-                            each chapter. Our instructor walks through every
-                            topic in Urdu, making complex concepts easy to
-                            understand.
-                        </p>
-                    </div>
-
-                    {/* Class 4 Playlist */}
-                    <div class="bg-white shadow-md rounded-lg p-6 text-center">
-                        <h2 class="text-2xl font-semibold mb-4">
-                            Math: Class 4 Playlist
-                        </h2>
-                        <iframe
-                            class="w-full h-64 mb-4 rounded-lg"
-                            src="https://www.youtube.com/embed/videoseries?list=PL5yflaiEp7FhfI_R-zBO3g0N6OQ4bKlhc"
-                            title="Math Class 4 Playlist"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        >
-                        </iframe>
-                        <p class="text-gray-700 text-justify">
-                            Explore Class 4 Math with our video lessons,
-                            covering each chapter in Urdu. This playlist makes
-                            learning Math engaging and accessible for everyone.
-                        </p>
+                {/* Carousel Section */}
+                <section class="relative">
+                    <div
+                        ref={carouselRef}
+                        class="flex overflow-x-auto space-x-4 max-w-screen-lg mx-auto px-4"
+                        style={{
+                            display: "flex",
+                            flexWrap: "nowrap",
+                            gap: "1rem",
+                        }}
+                    >
+                        {/* Playlist Cards */}
+                        {[
+                            {
+                                title: "Math Class 1",
+                                subtitle: "Little Hand Series || 2022",
+                                videos: 50,
+                                src: "https://www.youtube.com/embed/videoseries?list=PL5yflaiEp7FisZjwsjAjQXUh4o8YyNSbG",
+                                description:
+                                    "A complete video guide for Class 1 Math, covering each chapter in Urdu. Perfect for young learners to grasp foundational math concepts with ease.",
+                            },
+                            {
+                                title: "Math Class 2",
+                                subtitle: "Little Hand Series || 2022",
+                                videos: 68,
+                                src: "https://www.youtube.com/embed/videoseries?list=PL5yflaiEp7FhVI--uTPsyGLwLiRpWw5yt",
+                                description:
+                                    "Dive deeper into Math with Class 2 lessons in Urdu. This series helps students build on what they learned in Class 1, making math engaging and approachable.",
+                            },
+                            {
+                                title: "Math Class 3",
+                                subtitle: "Little Hand Series || 2022",
+                                videos: 32,
+                                src: "https://www.youtube.com/embed/videoseries?list=PL5yflaiEp7FhYwwvxqvctAI7gONGo_WBt",
+                                description:
+                                    "Designed for Class 3 students, this series explains more advanced math topics. Ideal for students aiming to solidify their knowledge with structured video lessons.",
+                            },
+                            {
+                                title: "Math Class 4",
+                                subtitle: "Little Hand Series || 2022",
+                                videos: "WIP",
+                                src: "https://www.youtube.com/embed/videoseries?list=PL5yflaiEp7FhfI_R-zBO3g0N6OQ4bKlhc",
+                                description:
+                                    "An extensive series for Class 4 Math, walking students through each chapter in Urdu. This series prepares learners for more complex math concepts.",
+                            },
+                        ].map((playlist, index) => (
+                            <div
+                                key={index}
+                                class="bg-white shadow-md rounded-lg p-6 text-center w-80 flex-shrink-0"
+                            >
+                                <h2 class="text-2xl font-semibold mb-1">
+                                    {playlist.title}
+                                </h2>
+                                <p class="text-gray-500 text-sm mb-2">
+                                    {playlist.subtitle}
+                                </p>
+                                <p class="text-gray-600 text-xs mb-4">
+                                    {playlist.videos} videos
+                                </p>
+                                <iframe
+                                    class="w-full h-64 mb-4 rounded-lg"
+                                    src={playlist.src}
+                                    title={playlist.title}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                >
+                                </iframe>
+                                <p class="text-gray-700 text-justify">
+                                    {playlist.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </section>
 
@@ -138,8 +130,9 @@ export default function Videos() {
                             class="text-blue-500 hover:underline"
                         >
                             YouTube channel
-                        </a>. Stay updated on new videos and resources by
-                        clicking the subscribe button.
+                        </a>
+                        . Stay updated on new videos and resources by clicking
+                        the subscribe button.
                     </p>
                 </section>
             </div>
