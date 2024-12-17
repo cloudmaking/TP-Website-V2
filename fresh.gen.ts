@@ -8,6 +8,11 @@ import * as $_app from "./routes/_app.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $contact from "./routes/contact.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $noc_eng_3 from "./routes/noc-eng-3.tsx";
+import * as $noc_eng_4 from "./routes/noc-eng-4.tsx";
+import * as $noc_urdu_2 from "./routes/noc-urdu-2.tsx";
+import * as $noc_urdu_3 from "./routes/noc-urdu-3.tsx";
+import * as $noc_urdu_4 from "./routes/noc-urdu-4.tsx";
 import * as $videos from "./routes/videos.tsx";
 import * as $Footer from "./islands/Footer.tsx";
 import * as $NavBar from "./islands/NavBar.tsx";
@@ -21,6 +26,11 @@ const manifest = {
     "./routes/api/joke.ts": $api_joke,
     "./routes/contact.tsx": $contact,
     "./routes/index.tsx": $index,
+    "./routes/noc-eng-3.tsx": $noc_eng_3,
+    "./routes/noc-eng-4.tsx": $noc_eng_4,
+    "./routes/noc-urdu-2.tsx": $noc_urdu_2,
+    "./routes/noc-urdu-3.tsx": $noc_urdu_3,
+    "./routes/noc-urdu-4.tsx": $noc_urdu_4,
     "./routes/videos.tsx": $videos,
   },
   islands: {
